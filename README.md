@@ -24,4 +24,5 @@ agent2.channels.memoryChannel.capacity = 100
 agent2.sinks.wso2carbonSink.type = ru.smsoft.cep.WSO2CarbonSink
 agent2.sinks.wso2carbonSink.channel = memoryChannel
 agent2.sinks.wso2carbonSink.carbon_agent_config = plugins.d/wso2-carbon-cep/data-agent-conf.xml
+agent2.sinks.wso2carbonSink.event_converter_class = ru.codeunited.flume.MyJsonConverter
 </pre>

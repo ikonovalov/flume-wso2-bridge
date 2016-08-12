@@ -30,6 +30,7 @@ public class WSO2CarbonSink extends AbstractSink implements Configurable {
     private static final String CARBON_USER = "carbon_user";
     private static final String CARBON_PASSWORD = "carbon_password";
     private static final String CARBON_AGENT_CONFIG_LOCATION = "carbon_agent_config";
+    private static final String EVENT_CONVERTER_CLASS = "event_converter_class";
 
     @Override
     public synchronized void stop() {
@@ -95,7 +96,7 @@ public class WSO2CarbonSink extends AbstractSink implements Configurable {
         String carbonUser = context.getString(CARBON_USER, "admin");
         String carbonPassword = context.getString(CARBON_PASSWORD, "admin");
 
-        String eventConverterClass = context.getString("event_converter_class");
+        String eventConverterClass = context.getString(EVENT_CONVERTER_CLASS);
 
         if (LOG.isInfoEnabled()) {
             LOG.info("WSO2 Carbon data agent config: {}", agentConfig);
